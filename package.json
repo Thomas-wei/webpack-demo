@@ -1,0 +1,24 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "webpack 学习笔记",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thomas-wei/webpack-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thomas-wei/webpack-demo/issues"
+  },
+  "homepage": "https://github.com/Thomas-wei/webpack-demo#readme",
+  "devDependencies": {
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  }
+}
