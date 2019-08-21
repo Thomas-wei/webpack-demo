@@ -4,7 +4,7 @@
   "description": "webpack 学习笔记",
   "private": true,
   "scripts": {
-    "start": "npx webpack",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
