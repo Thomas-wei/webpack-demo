@@ -4,6 +4,7 @@
   "description": "webpack 学习笔记",
   "private": true,
   "scripts": {
+    "start": "npx webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +21,8 @@
   "devDependencies": {
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
   }
 }
