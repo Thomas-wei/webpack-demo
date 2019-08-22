@@ -9,6 +9,14 @@ module.exports = {
     app: './src/index.js'
   },
   devtool: "cheap-source-map",
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  },
   plugins: [
     new CleanWebpackPlugin(), // 自动清理output指定的目录
     new HtmlWebpackPlugin({
