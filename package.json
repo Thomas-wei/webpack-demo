@@ -1,5 +1,6 @@
 {
   "name": "webpack-demo",
+  "sideEffects": ["./src/math.js"],
   "version": "1.0.0",
   "description": "webpack 学习笔记",
   "private": true,
