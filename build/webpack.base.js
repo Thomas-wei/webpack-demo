@@ -1,6 +1,7 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // 清理output目录
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -15,7 +16,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html',
       title: 'Production'
-    })
+    }),
+    new BundleAnalyzerPlugin()
   ],
   // optimization: {
   //   splitChunks: {
@@ -46,7 +48,7 @@ module.exports = {
   },
   output: {
     filename: "[name].bundle.js",
-    chunkFilename: "[name].bundle.js",
+    chunkFilename: "[name].chunk.js",
     path: resolve('dist')
   }
 };
