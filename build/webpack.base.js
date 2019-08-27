@@ -8,7 +8,8 @@ function resolve(dir) {
 
 module.exports = {
   entry: {
-    app: './src/index.js'
+    index: './src/index.js',
+    another: './src/another-module.js'
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -17,6 +18,18 @@ module.exports = {
       title: 'Production'
     })
   ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        commons: {
+          name: 'commons',
+          minChunks: 2,
+          chunks: 'initial' // 只打包初始时依赖的第三方
+        }
+      }
+    }
+  },
   module: {
     rules: [
       {
