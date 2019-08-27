@@ -8,8 +8,7 @@ function resolve(dir) {
 
 module.exports = {
   entry: {
-    index: './src/index.js',
-    another: './src/another-module.js'
+    index: './src/index.js'
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -18,18 +17,18 @@ module.exports = {
       title: 'Production'
     })
   ],
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-      cacheGroups: {
-        commons: {
-          name: 'commons',
-          minChunks: 2,
-          chunks: 'initial' // 只打包初始时依赖的第三方
-        }
-      }
-    }
-  },
+  // optimization: {
+  //   splitChunks: {
+  //     chunks: 'all',
+  //     cacheGroups: {
+  //       commons: {
+  //         name: 'commons',
+  //         minChunks: 2,
+  //         chunks: 'initial' // 只打包初始时依赖的第三方
+  //       }
+  //     }
+  //   }
+  // },
   module: {
     rules: [
       {
@@ -47,6 +46,7 @@ module.exports = {
   },
   output: {
     filename: "[name].bundle.js",
+    chunkFilename: "[name].bundle.js",
     path: resolve('dist')
   }
 };
